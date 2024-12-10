@@ -1,0 +1,148 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: #333;
+}
+
+
+.Container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.title span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0066ff;
+}
+
+
+.Info {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #555;
+    background: #f0f8ff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.GameContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+    gap: 0px; 
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.GameContainer button {
+    background: #0066ff;
+    color: white;
+    border-width: 1px;
+    border-radius: 0px;
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.GameContainer button:hover {
+    background: #28aaca;
+    transform: scale(1.1);
+}
+
+.GameContainer button:disabled {
+    background: #ccc;
+    color: #777;
+    cursor: not-allowed;
+}
+
+
+.Menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.Menu button {
+    background: #00c853;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.Menu button:hover {
+    background: #00a944;
+    transform: translateY(-2px);
+    box-shadow: 0px 5px 15px rgba(0, 201, 83, 0.4);
+}
+
+@media (max-width: 600px) {
+    .GameContainer {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .Menu button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+#questionText{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+}
+
+.x-coordinate {
+    font-family: 'Segoe UI';
+    font-weight: 700;
+    font-size: 34px;
+    display: flex;
+    gap: 28px;
+    margin-left: 33%;
+    margin-bottom: -17px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.y-coordinate {
+    position: relative;
+    font-family: 'Segoe UI';
+    font-weight: 700;
+    font-size: 34px;
+    display: grid;
+    margin-top: -465px;
+    margin-left: -300px;
+    row-gap: 4px;
+    z-index: 2;
+    pointer-events: none;
+}
